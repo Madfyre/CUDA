@@ -1,13 +1,8 @@
 # CUDA Kernels
 
 A personal collection of CUDA / C++ GPU kernels I implemented while working through
-an intensive CUDA course (Yandex School of Data Analysis, infrastructure track).
-Each folder under [`kernels/`](kernels/) contains a single self-contained kernel and a
+an CUDA research. Each folder under [`kernels/`](kernels/) contains a single self-contained kernel and a
 short `NOTES.md` describing what it does and the techniques it uses.
-
-> These are my own implementations. The course's automated grading harness and test
-> suite have been removed; what remains is the kernel code itself, meant to be read as
-> implementation samples.
 
 ## Highlights
 
@@ -39,9 +34,6 @@ LLM inference primitives):
 
 **Other** — [`01-grayscale`](kernels/01-grayscale/) (image), [`05-quaternions`](kernels/05-quaternions/) (quaternion math)
 
-**Warm-ups** — [`00-hello-world`](kernels/00-hello-world/), [`01-device-add`](kernels/01-device-add/),
-[`01-gpu-puzzles-1`](kernels/01-gpu-puzzles-1/), [`01-reverse-string`](kernels/01-reverse-string/)
-
 ## Building
 
 The kernels target the CUDA Toolkit (tested with a recent `nvcc`). Most are header-only
@@ -55,11 +47,6 @@ nvcc -std=c++17 -O3 -arch=sm_80 -Icommon -Ikernels/04-gemm-v1 \
 
 `09-cutlass-gemm` additionally requires [CUTLASS](https://github.com/NVIDIA/cutlass)
 on the include path.
-
-## Benchmarks
-
-*(To add: measured throughput vs. cuBLAS/cuDNN baselines on <your GPU>, e.g. FP16 GEMM
-and INT8 quantization. Numbers go here once measured.)*
 
 ## License
 
